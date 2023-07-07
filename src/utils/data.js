@@ -25,6 +25,18 @@ export const getMealListByCategory = async (categoryName) => {
 };
 
 
+// Fetch Detail Meal
+export const getMealDetailById = async (mealId) => {
+  try{
+    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
+    return response.data.meals;
+
+  }catch(error){
+    console.log(error);
+    return [];
+  }
+}
+
 
 // export const getMealListByCategory = async (categoryName) => {
 //   try {

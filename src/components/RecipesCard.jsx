@@ -7,8 +7,10 @@ import { getRecipeList } from '../utils/data'
 
 function RecipesCard() {
 const [categories, setCategories] = useState([]);
+// 
 const navigate = useNavigate();
 
+// fungsi navigateToCategory untuk melakukan navigasi ke halaman /category dengan menyertakan strCategory sebagai state. Dalam hal ini, strCategory berasal dari properti category.strCategory yang diberikan pada saat card kategori diklik di komponen RecipesCard.
 const navigateToCategory = (strCategory) => {
   navigate('/category', { state: { strCategory } });
 };
